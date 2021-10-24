@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <link rel="icon" href="https://glitch.com/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Your new 11ty blog" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+  <main>
+
+    {# Page or post content will appear here #}
+
+  <div class="wrapper home">
+    <div class="content">
+      {{ content | safe }}
+
+      {# After the the content defined in index.md, list the blog posts in the collection #}
+      <ul>
+        {%- for post in collections.posts -%}
+        <li{% if page.url == post.url %} aria-current="page"{% endif %}><strong>{{ post.data.page.date | htmlDateString }} — <a href='{{ post.url }}'>{{ post.data.title }}</a></strong>
+        <br>{{ post.data.content | safe }}<br><span class="divider">---------</span></li>
+      {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+
+
+  </main>
+
+  </body>
+</html>

@@ -1,0 +1,15 @@
+{
+  "name": "misc-blog",
+  "version": "0.0.1",
+  "description": "a very simple log of my adventures with coding",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.12.1"
+  }
+}
